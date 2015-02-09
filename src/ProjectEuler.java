@@ -51,12 +51,47 @@ public class ProjectEuler {
 		}
 		return num;
 	}
-		public static void main(String[] args){
-		System.out.println("Method 1:" + sumSquareDifference());
-		System.out.println("Method 2:" + multiples35());
-		System.out.println("Method 3:" + fib());
-		System.out.println("Method 4:" + divisible());
-		//System.out.println("Method 5:" + primeFactor());
+	
+	
+	public static boolean isPal(int num){
+		int reversed = 0;
+		int original = num;
+		    
+		if (num < 10) return true;
+		if (num % 10 == 0) return false;
+		while (num >= 1){
+			reversed = (reversed * 10) + (num % 10);
+			num = num/10;
+		}
+		if(original == reversed) return true;
+		else{ return false;}
+	}
+	public static int largestPalindrome(){
+		int max = 0;
+		int a = 999;
+		int b = 999;
+		int prod = 0;
+		while(a > 99){
+			b = 999;
+			while(b > a){
+				prod = a*b;
+				if(prod>max && isPal(prod)){
+					max = prod;
+				}
+				b--;
+			}
+			a--;
+		}
+		return max;
+	}
+	
+	
+	public static void main(String[] args){
+		//System.out.println("Method 1:" + sumSquareDifference());
+		//System.out.println("Method 2:" + multiples35());
+		//System.out.println("Method 3:" + fib());
+		//System.out.println("Method 4:" + divisible());
+		System.out.println("Method 5:" + largestPalindrome());
 	}
 	
 }
