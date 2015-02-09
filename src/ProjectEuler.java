@@ -87,10 +87,10 @@ public class ProjectEuler {
 	
 	
 	public static void main(String[] args){
-		//System.out.println("Method 1:" + sumSquareDifference());
-		//System.out.println("Method 2:" + multiples35());
-		//System.out.println("Method 3:" + fib());
-		//System.out.println("Method 4:" + divisible());
+		System.out.println("Method 1:" + sumSquareDifference());
+		System.out.println("Method 2:" + multiples35());
+		System.out.println("Method 3:" + fib());
+		System.out.println("Method 4:" + divisible());
 		System.out.println("Method 5:" + largestPalindrome());
 	}
 	
